@@ -15,7 +15,8 @@ import { FcApproval, FcManager, FcBusinessman } from "react-icons/fc";
 import FeatureBox from "../components/FeatureBox";
 import styles from "../styles/Home.module.css";
 import { useNavigate } from "react-router-dom";
-//import { useMetamask } from "../hooks/useMetamask";
+import axios from "axios";
+
 
 const ConnectWalletPage = () => {
   const navigate = useNavigate();

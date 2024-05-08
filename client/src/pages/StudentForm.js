@@ -1,31 +1,12 @@
 
-import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-    InputRightAddon,
-    InputGroup,
-    Alert,
-    AlertIcon,
-    AlertDescription,
-    FormHelperText,
-    Textarea,
-} from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Link, useNavigate } from 'react-router-dom';
-import { useForm } from "react-hook-form";
+
 
 
 
 import React, { useState } from 'react'
-
+import { Button } from "@chakra-ui/react";
 
 
 import { auth } from './Firebase_config';

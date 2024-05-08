@@ -75,10 +75,23 @@ const IssuerIsRegistered = () => {
    
     fn();
   },[]);
-
+  async function del()
+  {
+    let provider = window.ethereum;
+      
+      const web3 = new Web3(provider);
+      
+      const accounts = await web3.eth.getAccounts();
+    const account = accounts[0];
+   alert("sdf")
+     let res= await abi.methods.deleteDocument(email,"bafybeidgw4mmu4sf324ptzsdop7kj4xqlj3hqgnndwqkcxm2whamco6srq").call();
+  }
   return (
     <main className={styles.main}>
+      
       <Container py={{ base: "10", md: "12" }} maxW={"7xl"}>
+       <button onClick={()=>del()}>Delete</button>
+      
         <Flex flexDirection={{ base: "column", lg: "row" }} py={4}>
           <Box py="2" pr="2">
             <Heading

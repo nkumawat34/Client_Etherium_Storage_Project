@@ -122,7 +122,7 @@ export default function Uploadform_teacher() {
     axios.get("http://127.0.0.1:5000/encryptpdf",{
       params:{
         param1:fileName,
-        param2:"output.pdf",
+        param2:fileName,
         param3:"Nk@12351235"
       }
     }).then(response=>{
@@ -167,7 +167,7 @@ params:{
 
 })
   */
- alert("Hi")
+ 
 axios.get("http://localhost:3000/email",{
     params:{
       param1:issueremail,

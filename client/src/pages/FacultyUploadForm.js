@@ -44,7 +44,7 @@ const qr_code_download=(documentName,documentId)=>{
     }})
     .then(response=>{
       //Handle erros
-      alert("asd")
+     // alert("asd")
       
     })
   

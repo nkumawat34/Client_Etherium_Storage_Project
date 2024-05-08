@@ -13,9 +13,9 @@ import StudentIsRegistered from "./pages/StudentIsRegistered";
 import IssuerIsRegistered from "./pages/IssuerIsRegistered";
 import IssueNewCertiForm from "./pages/IssueNewCertiForm";
 import ConnectWalletPage from "./pages/ConnectWalletPage";
-import CertificatePage from "./pages/CertificatePage";
+//import CertificatePage from "./pages/CertificatePage";
 
-import WarningInstallMetaMask from "./pages/WarningInstallMetaMask";
+
 import Faculty from "./pages/Faculty";
 
 import FacultyUploadForm from "./pages/FacultyUploadForm";
@@ -47,11 +47,7 @@ function App() {
               path="/connect-wallet"
               element={<ConnectWalletPage />}
             ></Route>
-            <Route
-              exact
-              path="/install-metamask"
-              element={<WarningInstallMetaMask />}
-            ></Route>
+           
 
             {/* choice b/w issuer and student */}
             <Route
@@ -123,7 +119,7 @@ function App() {
             {/* displays certificate details issued to the student */}
             <Route               
               path="/certificate/:uuid"
-              element={<CertificatePage />}
+            //  element={<CertificatePage />}
             ></Route>
              <Route
               exact

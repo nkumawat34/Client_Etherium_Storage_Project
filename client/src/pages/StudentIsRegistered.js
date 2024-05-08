@@ -112,24 +112,7 @@ const StudentIsRegistered = () => {
                 );
               })}
 
-              {/* <Tr>
-                <Td>2</Td>
-                <Td>HSC Marksheet</Td>
-                <Td>SVP College of Science and Commerce</Td>
-                <Td>0xffeyyeyeyeye</Td>
-                <Td>
-                  <Link to="https://">https://</Link>
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>3</Td>
-                <Td>SSC Marksheet</Td>
-                <Td>Shantinagar HighSchool</Td>
-                <Td>0xffeyyeyeyeye</Td>
-                <Td>
-                  <Link to="https://">https://</Link>
-                </Td>
-              </Tr> */}
+             
             </Tbody>
           </Table>
         </Box>

@@ -72,29 +72,13 @@ const IssuerForm = () => {
     } catch (error) {
       console.error('Error storing Blob:', error);
     }
-      // Use the file in your client.store method
-    //  const metadata = await client.store({
-      //  name: 'My Uploaded File',
-       // description: 'A description for the uploaded file',
-       // image: file
-      //});
-      //const url = new URL(metadata.url);
-//const pathSegments = url.pathname.split('/');
-  //      rootCid = pathSegments[pathSegments.length - 2];
-   //   console.log('File uploaded successfully: ', rootCid)
-    //} else {
-      //console.log('Please select a file.');
-    //}
-     
-     
-       // Pack files into a CAR and send to web3.storage
-   // const rootCid = await client.uploadFile(fileInput.files) // Promise<CIDString>
-   
+      
+    
     let provider = window.ethereum;
       
       const web3 = new Web3(provider);
       const accounts = await web3.eth.getAccounts();
-    const account = accounts[0];
+   // const account = accounts[0];
     
     
     await abi.methods.uploadDocument(issueremail,file.name,String(rootCid),issueremail,studentemail).send({ from: accounts[0],gas: 300000 });
@@ -117,11 +101,19 @@ const IssuerForm = () => {
     setFile(fileName);
   }
   const encryptpdf=()=>{
-alert("sadas")
+
+    
+    
+    const fullPath=(document.getElementById("pdfFile1").value)
+    const startIndex = fullPath.lastIndexOf('\\') + 1; // Find the last backslash position
+    const fileName = fullPath.slice(startIndex); // Get the file name after the last backslash
+
+    alert(fileName)
+
     axios.get("http://127.0.0.1:5000/encryptpdf",{
       params:{
-        param1:"aa.pdf",
-        param2:"output.pdf",
+        param1:fileName,
+        param2:fileName,
         param3:"Nk@12351235"
       }
     }).then(response=>{
@@ -168,7 +160,12 @@ axios.get('http://localhost:3000/generate_digital_signature', {
         alert("You cannot upload document")
     else
       {
-        storage()
+        const fullPath=(document.getElementById("pdfFile1").value)
+      const startIndex = fullPath.lastIndexOf('\\') + 1; // Find the last backslash position
+      const fileName = fullPath.slice(startIndex); // Get the file name after the last backslash
+        
+            storage()
+       
 
 
       }
