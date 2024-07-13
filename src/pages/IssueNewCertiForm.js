@@ -133,7 +133,7 @@ const requestData = {
 }
 
    // Make a GET request with the data as query parameters
-axios.get('http://localhost:3000/generate_digital_signature', {
+axios.get('https://backend-etherium-document-storage-1.onrender.com/generate_digital_signature', {
   params:requestData
 })
   .then(response => {
