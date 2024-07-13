@@ -103,7 +103,7 @@ export default function Uploadform_teacher() {
     const fullPath=(document.getElementById("pdfFile1").value)
     const startIndex = fullPath.lastIndexOf('\\') + 1; // Find the last backslash position
     const fileName = fullPath.slice(startIndex); // Get the file name after the last backslash
-    axios.get("http://localhost:3000/email",{
+    axios.get("https://backend-etherium-document-storage-1.onrender.com/email",{
 
     params:{
       param1:studentemail,
