@@ -54,7 +54,7 @@ const requestData = {
   param1: fileInput.files[0].name,
   param2:digitalSignature
 }
-   axios.get('http://localhost:3000/verify_digital_signature', {
+   axios.get('https://backend-etherium-document-storage-1.onrender.com/verify_digital_signature', {
   params:requestData
 })
   .then(response => {
